@@ -23,26 +23,19 @@ verMais.addEventListener("click", () => {
 });
 */
 
-var lastIndex = 0; //receber qual a ultima imagem
+var lastIndex = 0;
 
-var imagens = document.querySelectorAll(".img"); //Recebe todas as imagens
-imagens.forEach((item, index) => {
-  document.querySelectorAll(".bulletSingle")[index].addEventListener("click", (atual) => {
-      console.log("o bullet clicado foi o " + index); //Mostra qual foi o bullet clicado;
-      let lastImg = document.querySelectorAll(".img")[lastIndex]; //Pega a antiga imagem em foco
-      let ActualImg = document.querySelectorAll(".img")[index]; //Pega a atual imagem em foco
-      console.log(
-        "a imagem antiga foi :" + lastImg + " e a atual é:" + ActualImg
-      );
+let imgs = document.querySelectorAll(".img");
 
-      document
-        .querySelectorAll(".bulletSingle")
-        [lastIndex].classList.remove("active-bullet");//tira o status de ativo do antigo
-      document
-        .querySelectorAll(".bulletSingle")
-        [index].classList.add("active-bullet");//coloca o status de ativo no novo
-      lastIndex = index;
-      lastImg.style.display = "none";
-      ActualImg.style.display = "block";
-    });
-});
+imgs.forEach((item,index)=>{
+  document.querySelectorAll(".bulletSingle")[index].addEventListener("click",()=>{
+    let actualImage = document.querySelectorAll(".img")[index];//Pega a imagem Atual
+    let lastImg = document.querySelectorAll(".img")[lastIndex];//Pega a ultima imagem
+    actualImage.classList.add("active-img");//coloca a imagem atual ativa
+    lastImg.classList.remove("active-img");//coloca a imagem antiga como inativa
+    document.querySelectorAll(".bulletSingle")[index].classList.add("active-bullet")//coloca o bullet atual ativo
+    document.querySelectorAll(".bulletSingle")[lastIndex].classList.remove("active-bullet")//coloca o bullet antigo como inativao
+    lastIndex = index;//torna o ultimo index como o que está agora
+ 
+  })
+})
