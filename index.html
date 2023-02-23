@@ -11,23 +11,71 @@
     * {
       font-family: sans-serif;
     }
+    html,
+    body {
+      height: 100%;
+    }
+    .container{
+      height: auto;
+    }
+    .img {
+      width: 100%;
+      transition: 1s;
+    }
+    .bullets {
+      display: flex;
+      column-gap: 20px;
+      justify-content: center;
+    }
+
+    .bulletSingle {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .active-bullet {
+      background-color: #333;
+      transition: 1s;
+    }
+    .img {
+      display: none;
+    }
+    .active-img {
+      display: block;
+    }
   </style>
   <body>
-    <!-- Primeira Aula DOM
-    <p class="p">olá mundo </p>
-    <p class="p">olá mundo </p>
-    <p class="p">olá mundo </p>
-    <p class="p">olá mundo </p>
-    <p class="p">olá mundo </p>
-    <script src="DOM/script.js"></script>
-  -->
-    <div id="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <script src="/DOM/manipulandoCss.js"></script>
+    <!--<div class="box" ></div>
+    <div class="conteudo">
+      <h2>Título do conteudo <span class="span ">Ver mais</span></h2>
+      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, aliquam? Fuga, molestiae quasi quas debitis non assumenda numquam eveniet delectus deleniti hic neque in facere voluptatibus? Perferendis iure asperiores dicta! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda alias explicabo nemo accusamus? Quibusdam non tempora voluptas nisi, animi delectus rem suscipit molestiae reiciendis quod! Quod officiis eligendi sequi minus.
+      </p>
+    </div>
+   -->
+    <div class="container">
+      <img
+        src="https://imgs.search.brave.com/AK9f-fJHi414VPEW82qZmkNYAW-MUZsWehp6qH0Ee4Q/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5o/M0VxdDN3Qkh1TTB0/TWJzbFZVY2R3SGFF/byZwaWQ9QXBp"
+        alt=""
+        class="img active-img"
+      />
+      <img
+        src="https://imgs.search.brave.com/DbAhx8Hy-cp0P7yrfkwyzKnuQ3sGYP6dH3qgUr_rkDw/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC44/ejMteWxDQWFrSWQ1/VHNnVTVuNi1RSGFF/OCZwaWQ9QXBp"
+        alt=""
+        class="img"
+      />
+      <img
+        src="https://imgs.search.brave.com/rxw8DN_Ky8whwmCe1LwXVyaAjkGf1DBuf1W5IaAT-bQ/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC50/TkI0UVR2Y2VYTHVJ/NWF5QUd1Q1V3SGFF/byZwaWQ9QXBp"
+        alt=""
+        class="img"
+      />
+    </div>
+    <div class="bullets">
+      <div class="bulletSingle active-bullet"></div>
+      <div class="bulletSingle"></div>
+      <div class="bulletSingle"></div>
+    </div>
+    <script src="/DOM/animacoes.js"></script>
   </body>
 </html>

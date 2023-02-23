@@ -15,3 +15,13 @@ for(let i = 0; i < element2.length; i++){
     element2[i].style.border = "1px solid #f9f9f9" ;
     element2[i].style.margin ="auto" ;
 }
+
+//querySelectorAll
+let query = document.querySelectorAll(".box");
+query.forEach((element)=>{
+    element.style.width ="100px" ;
+    element.style.height ="60px" ;
+    element.style.backgroundColor = "black" ;
+    element.style.border = "1px solid #f9f9f9" ;
+    element.style.margin ="auto" ;
+});
